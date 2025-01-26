@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card mb-5 w-100">
+        <img src="{% static 'images/exposejewerly.jpg' %}" class="card-img-top" alt="..."
+            style="object-fit: cover; overflow: hidden; height: 550px;">
+        <div class="card-body">
+            <h1 class="card-title" style="color: rgb(158, 45, 45); font-style: italic; font-family: 'Playfair Display', serif; text-align:left;">About us</h1>
+            <p class="card-text" style= "color: rgb(40, 60, 78); font-family:'Times New Roman', Times, serif; font-style: italic;"> <b>
+                Welcome to Enchanté Jewerly, where elegance meets craftsmanship. We are passionate
+                about creating timeless jewelry pieces that celebrate beauty, sophistication, and individuality. Our
+                carefully curated collections feature exquisite designs, each piece handcrafted with attention to detail
+                and the finest materials.
+                At Enchanté Jewerly, we believe that jewelry is more than just an accessory; it's a reflection of your
+                personal style and a symbol of life's precious moments. Whether you're searching for the perfect gift, a
+                special piece to mark a milestone, or simply looking to add a touch of luxury to your collection, we
+                offer something for everyone. 
+                Our commitment to quality and excellence ensures that every piece is crafted with care, precision, and a
+                dedication to lasting beauty. We take pride in offering not only stunning jewelry but also an
+                exceptional shopping experience, making sure every customer feels valued and inspired.
+                Thank you for choosing Enchanté Jewerly. We invite you to explore our collections and find a piece that
+                speaks to your unique story.
+            </b>
+            </p>
+            <p class="card-text" style="font-style: italic;"><small class="text-body-secondary">Enchanté Jewerly</small></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="card border-primary mb-4" style="max-width: 18rem;">
+              <small><div class="card-header">Enchanté Jewelry</div></small>
+              <div class="card-body text-primary">
+                <h5 class="card-title">Dana Cheng</h5>
+                <p class="card-text">“Jewelry is a treasure that lasts from one generation to another” </p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="card border-secondary mb-4" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body text-secondary">
+                <h5 class="card-title">Secondary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="card border-success mb-4" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body text-success">
+                <h5 class="card-title">Success card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="card border-danger mb-4" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body text-danger">
+                <h5 class="card-title">Danger card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="card border-warning mb-4" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Warning card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="card border-info mb-4" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Info card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="card border-light mb-4" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Light card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-3">
+            <div class="card border-dark mb-4" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Dark card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+
+</html>
+{% endblock %}

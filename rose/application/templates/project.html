@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- Fillimi i Carousel -->
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video autoplay muted loop>
+                    <source
+                        src="{% static 'images/356936_Gold Jewelry Necklace Presentation_By_David_Tembleque_Artlist_HD.mp4' %}"
+                        type="video/mp4">
+                </video>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 style="color:#a18e6b; font-family: 'Playfair Display', serif; font-style: italic;">"Jewelry has
+                        the power to be this one little thing that can make you feel
+                        unique."</h5>
+                    <p style="color:#a18e6b; font-family: 'Playfair Display', serif; font-style: italic;">Jennie Kwon.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video autoplay muted loop>
+                    <source
+                        src="{% static 'images/6133764_Luxury Watch High Class Hour Automatic Watch_By_Tony_Vallés_Artlist_HD.mp4' %}"
+                        type="video/mp4">
+                </video>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 style="color: #a18e6b; font-family: 'Playfair Display', serif; font-style: italic;">"Elegance is
+                        not being noticed, it's about being remembered."</h5>
+                    <p style="color: #a18e6b; font-family: 'Playfair Display', serif; font-style: italic;"> Coco Chanel
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+    <!-- Fundi i carousel -->
+
+    <!-- Fillimi i Navbar -->
+    {% include 'navbar.html' %}
+    <!-- Fundi i Navbar -->
+
+    <div>
+        <h1 class="pagetitle mt-5 mb-4"
+            style="font-style: italic; font-family: 'Playfair Display', serif; color: rgb(158, 45, 45); text-align: center; font-size: 80px;">
+            Latest Trends</h1>
+    </div>
+
+
+    <!-- Fillimi i card -->
+    <main>
+        <section class="container">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
+                    <a href="{% url 'contactPage' %}" style="text-decoration: none;">
+                        <div class="card h-100">
+                            <img src="{{product.product_image.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{product.product_title}}</h5>
+                                <p class="card-text">{{product.product_description}}</p>
+                                <p class="card-text">{{product.product_price}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    
+
+
+
+
+    <!-- Fundi i card -->
+
+
+
+    <!-- Fillimi i Footer -->
+
+    <!-- Fundi i footer -->
+
+    {% endblock %}

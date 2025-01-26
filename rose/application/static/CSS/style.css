@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-size: 2em;
+    font-family:'Playfair Display', serif;
+}
+
+
+a.logo{
+    margin-right: 40px;
+}
+
+.logo{
+    filter: grayscale(100%) brightness(1000%) contrast(100%);
+}
+.logo img {
+    width: 30%;
+    height: auto;
+}
+
+.brand {
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    letter-spacing: 6px;
+    text-decoration: none;
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7em;
+    font-weight: lighter;
+    background: linear-gradient(to right, #8d1c00, #8b3e30 ,#8a2514);
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: brightness(3);
+}
+
+
+.carousel-inner video {
+    position: relative;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(30%);
+}
+
+
+
+.collapse ul li{
+    letter-spacing: 2px;
+    justify-content: space-between;
+    margin-right: 55px;
+}
+
+h5{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1.5px;
+}
+
+p{
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+.container{
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px; 
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.card{
+    width: 300px;        
+    height: 400px;                
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+    display: flex;  
+    gap: 15px;    
+    margin-left: 20px;
+}
+
+.footer-container{
+    height: 350px;
+    background-color: #ffd587ee;
+    padding: 65px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+.terms{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+.endterms{
+    background-color: #ffd587ee;
+    padding: 20px;
+    height: auto;
+}
+
+.pagetitle{
+    text-align: left;
+}
+

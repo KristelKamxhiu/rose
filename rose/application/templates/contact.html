@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<body style="font-family: 'Playfair Display', serif; font-style: italic; color: rgb(158, 45, 45);">
+    <h1 style="text-align: center; font-size: 50px; margin-top: 20px;"> <!-- Reduced margin-top -->
+        Welcome to "Enchante Jewelry" Contact page</h1>
+    <hr size="10px">
+    <h3 style="margin-top: 20px;"> <!-- Reduced margin-top -->
+        Please Fill in the following data:</h3>
+
+    <main class="pt-3 mt-2">
+        <section class="container-fluid my-3 pt-3"> <!-- Reduced margin-top and padding-top -->
+            <div class="row">
+                <!-- Contact form on the left side, 50% width with some space -->
+                <div class="col-12 col-md-6" style="padding: 0 15px;"> <!-- Add padding to the columns -->
+                    <form method="POST" style="width: 100%; height: 100%;">
+                        {% csrf_token %}
+                        <div class="mb-4"> <!-- Added margin-bottom to each field -->
+                            <label for="name" class="form-label"
+                                style="display: block; font-weight: bold; margin-bottom: 5px;">Name</label>
+                            <input type="text" class="form-control" id="name" name="firstName"
+                                placeholder="Enter your name"
+                                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                        </div>
+                        <div class="mb-4">
+                            <label for="surname" class="form-label"
+                                style="display: block; font-weight: bold; margin-bottom: 5px;">Surname</label>
+                            <input type="text" class="form-control" id="surname" name="lastName"
+                                placeholder="Enter your Surname"
+                                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label"
+                                style="display: block; font-weight: bold; margin-bottom: 5px;">Email</label>
+                            <input type="email" class="form-control" id="email" name="emailName"
+                                placeholder="Enter your email"
+                                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+                        </div>
+                        <div class="mb-4">
+                            <label for="comment" class="form-label"
+                                style="display: block; font-weight: bold; margin-bottom: 5px;">Comment</label>
+                            <textarea id="comment" class="form-control" name="commentName"
+                                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease;"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-outline-primary" value="Send" style="background-color: rgb(192, 126, 126); color: white; border: none; padding: 10px 20px; width: 150px; height: 50px; font-size: 16px;">
+                    </form>
+                </div>
+
+                <!-- Google Map on the right side, 50% width with some space -->
+                <div class="col-12 col-md-6" style="padding: 0 15px;">
+                    <iframe width="100%" height="100%" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47934.10796158665!2d19.817823200000003!3d41.3331847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13502e198eaa714b%3A0xa858ccaf5ac85b57!2sQTU%20-%20Qendra%20Tregtare%20Univers!5e0!3m2!1sen!2s!4v1734361216576!5m2!1sen!2s"
+                        style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+{% endblock %}

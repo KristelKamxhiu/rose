@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!-- Fillimi i Carousel -->
+<!-- Kete mund ta ndryshosh -->
+    <!-- Fillimi i Navbar -->
+    <!-- Fundi i Navbar -->
+    <div>
+        <!-- Ketu therret emrin e kategorise ose fotos -->
+         <!-- cat e ke si key tek context ndersa category_title tek modeli -->
+        <h1 class="pagetitle" style="font-style: italic; font-family: 'Playfair Display', serif; color: rgb(158, 45, 45); text-align: center; font-size: 80px;">{{cat.category_title}}</h1>
+    </div>
+    <!-- Fillimi i card -->
+    <main>
+        <section class="container">
+            <div class="row">
+                <!-- Ketu behet cikli (sikurse eshte) por nuk duhet te vendoset products 
+                 por productsCategory (qe eeshte si key tek context) -->
+                {% for product in productsCategory %}
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
+                    <div class="card h-100">
+                        <img src="{{product.product_image.url}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.product_title}}</h5>
+                            <p class="card-text">{{product.product_description}}</p>
+                            <p class="card-text">{{product.product_price}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <!-- Fundi i card -->
+    <!-- Fillimi i Footer -->
+    <!-- Fundi i footer -->
+    {% endblock %}
