@@ -5,121 +5,144 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Base styling for the body */
+    body {
+      background-color: rgb(255, 234, 237);
+    }
+  </style>
+
 </head>
 
 <body>
-    <div class="card mb-5 w-100">
-        <img src="{% static 'images/exposejewerly.jpg' %}" class="card-img-top" alt="..."
-            style="object-fit: cover; overflow: hidden; height: 550px;">
-        <div class="card-body">
-            <h1 class="card-title" style="color: rgb(158, 45, 45); font-style: italic; font-family: 'Playfair Display', serif; text-align:left;">About us</h1>
-            <p class="card-text" style= "color: rgb(40, 60, 78); font-family:'Times New Roman', Times, serif; font-style: italic;"> <b>
-                Welcome to Enchanté Jewerly, where elegance meets craftsmanship. We are passionate
-                about creating timeless jewelry pieces that celebrate beauty, sophistication, and individuality. Our
-                carefully curated collections feature exquisite designs, each piece handcrafted with attention to detail
-                and the finest materials.
-                At Enchanté Jewerly, we believe that jewelry is more than just an accessory; it's a reflection of your
-                personal style and a symbol of life's precious moments. Whether you're searching for the perfect gift, a
-                special piece to mark a milestone, or simply looking to add a touch of luxury to your collection, we
-                offer something for everyone. 
-                Our commitment to quality and excellence ensures that every piece is crafted with care, precision, and a
-                dedication to lasting beauty. We take pride in offering not only stunning jewelry but also an
-                exceptional shopping experience, making sure every customer feels valued and inspired.
-                Thank you for choosing Enchanté Jewerly. We invite you to explore our collections and find a piece that
-                speaks to your unique story.
-            </b>
-            </p>
-            <p class="card-text" style="font-style: italic;"><small class="text-body-secondary">Enchanté Jewerly</small></p>
-        </div>
+  <div class="card mb-5 w-100">
+    <img src="{% static 'images/exposejewerly.jpg' %}" class="card-img-top" alt="..."
+      style="object-fit: cover; overflow: hidden; height: 550px;">
+    <div class="card-body">
+      <h1 class="card-title"
+        style="color: #6A4E39; font-family:'Times New Roman', Times, serif; font-style: italic; text-align: left;">
+        About us
+      </h1>
+      <hr>
+      <p class="card-text"
+        style="color: #6A4E39; font-family:'Times New Roman', Times, serif; font-style: italic; letter-spacing: 2px;">
+        <b>
+          Welcome to Enchanté Jewelry, where elegance meets craftsmanship. We are passionate
+          about creating timeless jewelry pieces that celebrate beauty, sophistication, and individuality. Our
+          carefully curated collections feature exquisite designs, each piece handcrafted with attention to detail
+          and the finest materials.
+          At Enchanté Jewelry, we believe that jewelry is more than just an accessory; it's a reflection of your
+          personal style and a symbol of life's precious moments. Whether you're searching for the perfect gift, a
+          special piece to mark a milestone, or simply looking to add a touch of luxury to your collection, we
+          offer something for everyone.
+          Our commitment to quality and excellence ensures that every piece is crafted with care, precision, and a
+          dedication to lasting beauty. We take pride in offering not only stunning jewelry but also an
+          exceptional shopping experience, making sure every customer feels valued and inspired.
+          Thank you for choosing Enchanté Jewelry. We invite you to explore our collections and find a piece that
+          speaks to your unique story.
+        </b>
+      </p>
+      <p class="card-text" style="font-style: italic;"><small class="text-body-secondary">Enchanté Jewelry</small></p>
     </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-3">
-            <div class="card border-primary mb-4" style="max-width: 18rem;">
-              <small><div class="card-header">Enchanté Jewelry</div></small>
-              <div class="card-body text-primary">
-                <h5 class="card-title">Dana Cheng</h5>
-                <p class="card-text">“Jewelry is a treasure that lasts from one generation to another” </p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-12 col-md-3">
-            <div class="card border-secondary mb-4" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body text-secondary">
-                <h5 class="card-title">Secondary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-12 col-md-3">
-            <div class="card border-success mb-4" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body text-success">
-                <h5 class="card-title">Success card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-12 col-md-3">
-            <div class="card border-danger mb-4" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body text-danger">
-                <h5 class="card-title">Danger card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-12 col-md-3">
-            <div class="card border-warning mb-4" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body">
-                <h5 class="card-title">Warning card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-12 col-md-3">
-            <div class="card border-info mb-4" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body">
-                <h5 class="card-title">Info card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-12 col-md-3">
-            <div class="card border-light mb-4" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body">
-                <h5 class="card-title">Light card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-      
-          <div class="col-12 col-md-3">
-            <div class="card border-dark mb-4" style="max-width: 18rem;">
-              <div class="card-header">Header</div>
-              <div class="card-body">
-                <h5 class="card-title">Dark card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
+
+  <div>
+    <h2 class="pagetitle mt-5 mb-3"
+      style="font-style: italic; font-family: 'Playfair Display', serif; color: rgb(158, 45, 45); text-align: center; font-size: 40px;">
+      Jewelry care tips & guides</h2>
+  </div>
+  <p class="card-text" style="text-align: center; font-style: italic;">
+    <small class="text-body-secondary">Enchanté Jewelry</small>
+  </p>
+  <hr>
+
+
+
+  <div class="card mb-5 w-100 mt-5 ">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static 'images/jw.jpg' %}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8 d-flex align-items-center justify-content-center">
+        <div class="card-body" style="color: #6A4E39; font-family:'Times New Roman', Times, serif; font-style: italic;">
+          <h5 class="card-title" style="font-size: 30px; text-align: center;">Cleaning and Polishing Tips</h5>
+          <br>
+          <p class="card-text">Your jewelry is an expression of beauty and elegance, and it deserves to shine
+            as brightly as you do. <br>
+            Keep your pieces looking stunning with just a few simple steps! <br>
+            Gently clean your jewelry with a mixture of warm water and mild dish soap to remove dirt and
+            oils, then
+            use a soft brush to bring out its natural brilliance. <br>
+            For a radiant finish, polish with a specialized cloth designed for your jewelry's metal. <br>
+            Avoid harsh chemicals or abrasive cleaners that could damage the delicate craftsmanship. <br>
+            When you care for your jewelry, it’ll continue to sparkle and dazzle, just like the memories it
+            holds.</p>
+          <p class="card-text"><small class="text-body-secondary">Enchanté Jewelry</small></p>
         </div>
       </div>
-      
+    </div>
+  </div>
+
+  <div class="card mb-5 mt-5 w-100">
+    <div class="row g-0">
+      <div class="col-md-8 d-flex align-items-center justify-content-center">
+        <div class="card-body" style="color: #6A4E39; font-family:'Times New Roman', Times, serif; font-style: italic;">
+          <h5 class="card-title" style="font-size: 30px; text-align: center;">Jewelry-Wearing Habits</h5> <br>
+          <p class="card-text">To keep your jewelry looking flawless and ensure it stays as stunning as the
+            day you bought it, here are a few simple habits to adopt: <br>
+            Always put on your jewelry after applying perfume, lotions, or makeup to avoid exposure to harsh
+            chemicals.
+            <br>
+            Take off your pieces before engaging in activities like exercising, swimming, or cleaning—these can cause
+            unnecessary
+            wear and tear. <br>
+            And don’t forget, a good night's rest is a great time to give your jewelry a break too! <br>
+            By taking these small steps, your cherished pieces will remain as radiant and timeless as ever.
+          </p>
+          <p class="card-text"><small class="text-body-secondary">Enchanté Jewelry</small></p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'images/ler.jpg' %}" class="img-fluid rounded-start" alt="...">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="card mb-5 mt-5 w-100">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static 'images/re.webp' %}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8 d-flex align-items-center justify-content-center">
+        <div class="card-body" style="color: #6A4E39; font-family:'Times New Roman', Times, serif; font-style: italic;">
+          <h5 class="card-title" style="font-size: 30px; text-align: center;">Seasonal Jewelry Care</h5> <br>
+          <p class="card-text">Just like your wardrobe, your jewelry needs a little extra attention with the
+            changing seasons. <br>
+            In the warmer months, sweat, sunscreen, and chlorine can take a toll on your
+            precious pieces, so be sure to clean them regularly to keep them looking fresh and bright. <br>
+            During the colder months, metals can contract, and gemstones can become more fragile, so it's
+            best to store your jewelry in a safe, warm place when not in use. <br>
+            By adjusting your jewelry care with the seasons, you’ll ensure that your pieces remain as radiant and
+            enduring as your personal
+            style.</p>
+          <p class="card-text"><small class="text-body-secondary">Enchanté Jewelry</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

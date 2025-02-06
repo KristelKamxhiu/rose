@@ -1,7 +1,8 @@
 {% load static %}
-<footer>
-    <div class="footer-container mt-5">
-        <div class="row">
+<footer style="margin-top: 0; padding-top: 0; margin-bottom: 0;">
+
+    <div class="footer-container" style="background-color: #ffebc7ee; margin-top: 4; padding-top: 5;">
+        <div class="row" style="margin-bottom: 0;">
             <div class="col">
                 <img src="" alt="">
                 <p style="color: #791901;">© 2025 Jewelry. All rights reserved.</p>
@@ -9,25 +10,29 @@
                 <p style="color: #791901;">Follow us on social media for exclusive offers and updates.</p>
             </div>
             <div class="col">
-                <p><a href="#" style="color: #791901; ">@EnchanteLuxuryJewelry</a></p>
+                <p><a href="#" style="color: #791901;">@EnchanteLuxuryJewelry</a></p>
                 <p><a href="#" style="color: #791901;">@EnchanteJewelryBoutique</a></p>
                 <p><a href="#" style="color: #791901;">+335 46 72 411</a></p>
                 <p><a href="{% url 'termsPage' %}" style="color: #791901;">Terms and Conditions</a></p>
             </div>
             <div class="col">
-                <p style="color: rgb(226, 25, 92);"><a href="#" style="color: rgb(226, 25, 92);"><i class="fa-brands fa-instagram"></i></a>  Instagram</p>
-                <p style="color: blue;"><a href="#" style="color: blue;"><i class="fa-brands fa-facebook"></i></a>  Facebook</p>
-                <p style="color: green;"><a href="#" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a>  Whatsapp</p>
+                <p style="color: rgb(226, 25, 92);"><a href="#" style="color: rgb(226, 25, 92);"><i class="fa-brands fa-instagram"></i></a> Instagram</p>
+                <p style="color: blue;"><a href="#" style="color: blue;"><i class="fa-brands fa-facebook"></i></a> Facebook</p>
+                <p style="color: green;"><a href="#" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a> Whatsapp</p>
             </div>
             <div class="col">
                 <h4 style="color: #791901;">Subscribe</h4>
-                <form>
+                <form action="/contact/" method="get"> <!-- Make sure to use your actual contact page URL -->
                     <div class="mb-3">
                         <label for="email" class="form-label" style="color: #791901;">Email</label>
                         <input type="email" class="form-control" id="email">
                     </div>
-                    <input type="submit" style="color: #58928f;" class="btn btn-outline-primary" value="Send">
+                    <!-- This button will take the user to the contact page on click -->
+                    <button type="submit" style="color: #58928f;" class="btn btn-outline-primary">
+                        Send
+                    </button>
                 </form>
+                
             </div>
             <div class="col-12">
                 <p style="color: #791901;">Copyrights: <span id="year"></span></p>

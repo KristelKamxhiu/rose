@@ -1,38 +1,104 @@
-<!DOCTYPE html>
 {% extends 'index.html' %}
 {% load static %}
 {% block content %}
-<!-- Fillimi i Carousel -->
-<!-- Kete mund ta ndryshosh -->
-    <!-- Fillimi i Navbar -->
-    <!-- Fundi i Navbar -->
-    <div>
-        <!-- Ketu therret emrin e kategorise ose fotos -->
-         <!-- cat e ke si key tek context ndersa category_title tek modeli -->
-        <h1 class="pagetitle" style="font-style: italic; font-family: 'Playfair Display', serif; color: rgb(158, 45, 45); text-align: center; font-size: 80px;">{{cat.category_title}}</h1>
+
+<style>
+    /* Card container */
+    .card {
+        background-color: #fff;
+        border: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+    }
+
+    /* Hover effect for cards */
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top:hover {
+        opacity: 0.85;
+    }
+
+    /* Card header */
+    .card-header {
+        background-color: transparent;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        color: #C69C6D; /* Gold color */
+        text-align: center;
+        padding: 20px 0;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* Card body styling */
+    .card-body {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Title of each card */
+    .card-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        color: #4F4A4A; /* Dark brown for a classic feel */
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Card text styling */
+    .card-text {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+        color: #6A4E39; /* Rich brown */
+        font-style: italic;
+    }
+</style>
+
+<div class="main-content" style="background-color: rgb(255, 234, 237); margin: 0; padding: 0;">
+
+    <main style="margin-top: 0; padding-top: 0; padding-bottom: 0;">
+        <div class="card w-100" style="border: none; filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.3));">
+            <img src="{% static 'images/wommancategory.jpg' %}" class="card-img-bottom" alt="..." 
+                style="display: block; width: 100%; height: auto; z-index: -1; filter: brightness(45%); object-fit: cover; overflow: hidden; height: 550px;">
+        </div>
+    </main>
+    
+
+    <!-- Title -->
+    <div style="margin: 0; padding: 0;">
+        <h1 class="pagetitle mt-5" style="font-style: italic; font-family: 'Playfair Display', serif; color: rgb(158, 45, 45); text-align: center; font-size: 80px; margin-bottom: 30px;">
+            {{cat.category_title}}
+        </h1>
+        <p class="card-text" style="text-align: center; font-style: italic;">
+            <small class="text-body-secondary">Enchanté Jewelry</small>
+        </p>
     </div>
-    <!-- Fillimi i card -->
-    <main>
-        <section class="container">
+    <hr style="margin-top: 0; margin-bottom: 0;">
+
+    <!-- Cards -->
+    <main style="background-color: rgb(255, 234, 237);">
+        <section class="container" style="padding-bottom: 40px; margin-bottom: 0;">
             <div class="row">
-                <!-- Ketu behet cikli (sikurse eshte) por nuk duhet te vendoset products 
-                 por productsCategory (qe eeshte si key tek context) -->
                 {% for product in productsCategory %}
                 <div class="col-12 col-md-6 col-lg-4 mb-5">
-                    <div class="card h-100">
-                        <img src="{{product.product_image.url}}" class="card-img-top" alt="...">
+                    <!-- Wrap the card in a link to contact page -->
+                    <a href="{% url 'contactPage' %}" class="card h-100 product-card text-decoration-none">
+                        <img src="{{product.product_image.url}}" class="card-img-top product-image" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{product.product_title}}</h5>
                             <p class="card-text">{{product.product_description}}</p>
                             <p class="card-text">{{product.product_price}}</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
         </section>
     </main>
-    <!-- Fundi i card -->
-    <!-- Fillimi i Footer -->
-    <!-- Fundi i footer -->
-    {% endblock %}
+</div>
+{% endblock %}

@@ -1,42 +1,99 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg position-absolute top-0 w-100 p-3 mb-2">
     <div class="container-fluid">
-        <a class="logo" href="{% url 'projectPage' %}"><img src="{% static 'images/women-removebg-preview.png' %}" alt=""></a>
-        <span class="brand ps-2">Enchanté Jewelry</span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <a class="logo" href="{% url 'projectPage' %}"><img src="{% static 'images/women-removebg-preview.png' %}"
+                alt=""></a>
+        <span class="brand ps-2"
+            style="background-image: linear-gradient(45deg, #ff4d4d, #b30000); -webkit-background-clip: text; color: transparent;">Enchanté
+            Jewelry</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse me-5">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item ">
-                    <a class="nav-link active" aria-current="page" href="#" style="color:#ffd587ee;">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'projectPage' %}"
+                        style="color:rgb(238, 194, 194);">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false" style="color:#ffd587ee;">
+                        aria-expanded="false" style="color:rgb(238, 194, 194);">
                         Category
                     </a>
                     <ul class="dropdown-menu">
                         {% for category in categories %}
-                        <li><a class="dropdown-item" href="{% url 'categoryPage' category.pk %}">{{category.category_title}}</a></li>
+                        <li><a class="dropdown-item"
+                                href="{% url 'categoryPage' category.pk %}">{{category.category_title}}</a></li>
                         {% endfor %}
                     </ul>
-                    <li class="nav-item ">
-                        <a class="nav-link active" aria-current="page" href="{% url 'aboutPage' %}" style="color:#ffd587ee;">About us</a>
-                    </li>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link active" aria-current="page" href="{% url 'contactPage' %}" style="color:#ffd587ee;">Contact</a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'aboutPage' %}"
+                        style="color:rgb(238, 194, 194);">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'contactPage' %}"
+                        style="color:rgb(238, 194, 194);">Contact</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex" action="/about" method="get">
+                <input class="form-control me-3" type="text" id="search" name="query" placeholder="Search..." aria-label="Search">
                 <button class="btn btn-outline-success me-3" style="color: #88ece7" ; type="submit">Search</button>
             </form>
-
         </div>
     </div>
-   
 </nav>
+
+<style>
+    /* Base color for links */
+    .navbar-nav .nav-link {
+        color: rgb(238, 194, 194);
+        position: relative;
+        transition: color 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+    }
+
+    /* Hover effect: color change, slight scaling, and underline effect */
+    .navbar-nav .nav-link:hover {
+        color: #ff6600;
+        /* Change to your desired hover text color */
+        transform: scale(1.1);
+        /* Slight zoom effect */
+        padding-bottom: 3px;
+        /* Adds space for the underline effect */
+    }
+
+    /* Create an animated underline on hover */
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: rgb(248, 241, 241);
+        /* Underline color */
+        left: 50%;
+        bottom: 0;
+        transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    #search {
+        pointer-events: auto;
+        z-index: 10;
+        /* Ensure the input is above other elements */
+    }
+
+    /* Ensure the form is not affected by other styles */
+    form {
+        z-index: 10;
+    }
+
+    /* Optional: Add padding to prevent the input from looking too small */
+    input[type="text"] {
+        padding: 8px;
+    }
+</style>

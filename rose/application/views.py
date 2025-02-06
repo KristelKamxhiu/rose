@@ -4,7 +4,8 @@ from.models import *
 def project(request):
     categories = Category.objects.all()
     products = Product.objects.all()
-    context = {"products": products, "categories": categories}
+    items = Item.objects.all()
+    context = {"products": products, "categories": categories, "items": items}
     return render(request, "project.html", context)
 
 
@@ -37,9 +38,14 @@ def category(request,id):
     categories = Category.objects.all()
     cat = Category.objects.get(pk = id)
     productsCategory = Product.objects.filter(product_category = cat)
-    context = {"categories": categories, "cat": cat, "productsCategory" : productsCategory}
+    context = {"categories": categories, "cat": cat, "productsCategory": productsCategory}
     return render(request, "category.html", context)
 
+def item(request, id):
+    items=Item.objects.get(pk=id)
+    ndarja=Product.objects.filter(product_item=items)
+    context={"items": items,"ndarja": ndarja}
+    return render(request, 'item.html',context)
 
    
 
